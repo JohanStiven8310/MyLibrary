@@ -1,8 +1,18 @@
 ﻿using MyLibrary;
+using System.Net;
 
-int i = 5;
-string Name = "Hello";
+Secretary Maria = new Secretary();
+Maria.Name = "Maria";
+Manager Pedro = new Manager();
+Pedro.Name = "Pedro";
+Developer Miguel = new Developer();
+
+WriteEmployeeinfo(Maria);
+WriteEmployeeinfo(Pedro);
+WriteEmployeeinfo(Miguel);
 
 
-Product Leche;
-Leche = new Product(1, "Leche entera", 19, 100);
+void WriteEmployeeinfo(Employee employee)
+{
+    Console.WriteLine($"{employee.Name}: {employee.CalculateMonthlyPayment()}");
+}
