@@ -6,30 +6,24 @@ using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public  class Product(int id, string name, decimal unitPrice, int unitsInStock) 
+    public class Product(int id, string name, decimal unitPrice, int unitsInStock)
     {
         //Propiedades 
 
-       
-        public int Id { get; }
 
-        
-        public string Name { get; }
-        public decimal UnitPrice;{  get; }
+        public int Id => id;
 
-        public int UnitsInStock; {  get;  }
+        public string Name => name;
+        public decimal UnitPrice;=> decimal.Zero;
 
-       
-        //Constructor
+        public int UnitsInStock; => unitsInStock;
 
-        public Product (int id, string name, decimal unitPrice, int unitsInStock)
-        {
-            Id = id;
-            Name = name;
-            UnitPrice = unitPrice;
-            UnitsInStock = unitsInStock;
+        public bool Discontinued { get; private set; }
 
-        }
+        public void SetDiscontinued() =>
+            Discontinued = true;
+        public bool GetStatus() =>
+            Discontinued;
 
     }
 }
