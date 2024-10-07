@@ -8,17 +8,20 @@ namespace MyLibrary
 {
     public  class Product
     {
-        //Fiel, Campo, variable
-        private int Id_Field;
-        public int Id;
-        {
-            get { return Id_Field; }
-            set { Id_Field = value; }
+        //Propiedades 
 
-        }
-        public string Name;
-        public decimal UnitPrice;
-        public int UnitsInStock;
+       
+        public int Id { get; }
+
+        
+        public string Name { get; }
+        public decimal UnitPrice;{  get; }
+
+        public int UnitsInStock; {  get;  }
+
+       
+        //Constructor
+
 
     }
 }
