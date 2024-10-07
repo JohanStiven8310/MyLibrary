@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyLibrary
 {
-    public  class Product
+    public  class Product(int id, string name, decimal unitPrice, int unitsInStock) 
     {
         //Propiedades 
 
@@ -22,6 +22,14 @@ namespace MyLibrary
        
         //Constructor
 
+        public Product (int id, string name, decimal unitPrice, int unitsInStock)
+        {
+            Id = id;
+            Name = name;
+            UnitPrice = unitPrice;
+            UnitsInStock = unitsInStock;
+
+        }
 
     }
 }
