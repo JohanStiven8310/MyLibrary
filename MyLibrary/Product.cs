@@ -14,9 +14,9 @@ namespace MyLibrary
         public int Id => id;
 
         public string Name => name;
-        public decimal UnitPrice;=> decimal.Zero;
+        public decimal UnitPrice=> decimal.Zero;
 
-        public int UnitsInStock; => unitsInStock;
+        public int UnitsInStock => unitsInStock;
 
         public bool Discontinued { get; private set; }
 
